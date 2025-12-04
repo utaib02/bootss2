@@ -1,0 +1,118 @@
+# Boots Tier System v4 Configuration
+
+# General Settings
+general:
+  # Default lives when player joins
+  default-lives: 5
+  # Maximum lives a player can have
+  max-lives: 10
+  # Whether to give boots on first join
+  give-boots-on-join: true
+  # Debug mode for additional logging
+  debug: false
+  # Enable armor trims for boots
+  armor-trims-enabled: true
+
+# Pedestal Settings
+pedestal:
+  # Default pedestal location (world spawn)
+  location:
+    world: "world"
+    x: 0
+    y: 64
+    z: 0
+  # Whether pedestal is currently active
+  active: false
+  # Ritual duration in seconds
+  ritual-duration: 300
+  # Time to stand on beacon after ritual completes
+  beacon-stand-time: 10
+  # Beacon lives (how many times it can be broken)
+  beacon-lives: 3
+  orbit-radius: 3.0
+  orbit-count: 8
+  particle-center-offset: 0.5
+
+# Particle Settings
+particles:
+  # Whether to show boot particles
+  enabled: true
+  # Particle update frequency (ticks)
+  update-frequency: 1
+  # Particle count per update
+  particle-count: 8
+  # Particle radius around player
+  radius: 1.0
+  # Show breaking animation when boots break
+  breaking-animation: true
+  display-type: "ITEM_DISPLAY"
+  rotation-speed: 0.05
+
+# Cooldown Settings
+cooldowns:
+  # Dragon egg cooldown reduction (0.5 = 50% reduction)
+  dragon-egg-reduction: 0.5
+  # Whether to show cooldowns in action bar
+  show-action-bar: true
+  # Action bar update frequency (ticks)
+  action-bar-frequency: 1
+
+# Trust System
+trust:
+  # Maximum trusted players per player
+  max-trusted: 10
+  # Whether to broadcast trust messages
+  broadcast-trust: true
+
+# Boot Breaking System
+boot-breaking:
+  # Enable automatic boot breaking when lives reach 0
+  enabled: true
+  # Show warning when boots have 1 life remaining
+  low-life-warning: true
+  # Warning message interval (seconds)
+  warning-interval: 30
+  # Breaking animation duration (ticks)
+  breaking-animation-duration: 60
+
+# Messages
+messages:
+  prefix: "&8[&6⚡ Boots&8] &r"
+  
+  # Boot breaking messages
+  boots-broken: "&c⚠ Your bond with your boots has been severed. The tier magic fades away..."
+  boots-warning: "&6Your boots vibrate weakly — their magic is fading!"
+  boots-repaired: "&a✦ Your boots have been restored to their former glory!"
+  
+  # General messages
+  no-permission: "&cYou don't have permission to use this command!"
+  player-not-found: "&cPlayer not found!"
+  boots-given: "&a⚡ Welcome back, warrior of the boots. Your energy has been restored."
+  boots-rerolled: "&e✦ Your boots have transformed into {type}!"
+  tier-upgraded: "&6✦ Your boots ascend to Tier {tier}!"
+  
+  # Ability messages
+  ability-activated: "&e✦ Ability {tier} Activated: &f{ability}"
+  ability-cooldown: "&7You must wait before using this again."
+  ability-ready: "&a✦ Your power is ready to be unleashed!"
+  
+  # Lives messages
+  lives-check: "&7Lives: &e{lives}&7/&e{max}"
+  lives-gained: "&a+1 Life gained from victory!"
+  lives-lost: "&c-1 Life lost in battle!"
+  
+  # Trust messages
+  trust-added: "&a✦ You have trusted &e{player}&a!"
+  trust-removed: "&c✦ You have untrusted &e{player}&c!"
+  trust-received: "&a✦ &e{player}&a has trusted you!"
+  trust-revoked: "&c✦ &e{player}&c has untrusted you!"
+  
+  # Ritual messages
+  ritual-started: "&6✦ Repair ritual initiated! The beacon awaits in {time} minutes."
+  ritual-completed: "&a✦ The ritual is complete! Your boots have been reborn!"
+  ritual-failed: "&c✦ The ritual has failed. The magic dissipates..."
+  
+  # Pedestal messages
+  pedestal-set: "&a✦ Pedestal location anchored!"
+  pedestal-activated: "&a✦ The pedestal awakens with ancient power!"
+  pedestal-deactivated: "&c✦ The pedestal's power fades to slumber!"

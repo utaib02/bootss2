@@ -1,0 +1,90 @@
+name: BootsTierSystem
+version: '22.0.0'
+main: com.bootstier.BootsTierPlugin
+api-version: '1.21'
+author: Utaib
+description: BOOTSSMPS2
+
+depend: [ProtocolLib]
+
+commands:
+  boots:
+    description: Main BootsTierSystem command
+    usage: /boots [info|help|give|reload]
+    permission: boots.use
+    aliases: [boot]
+
+  ability1:
+    description: Activates your primary ability
+    usage: /ability1
+    permission: boots.use
+    aliases: [a1]
+
+  ability2:
+    description: Activates your secondary ability
+    usage: /ability2
+    permission: boots.use
+    aliases: [a2]
+
+  pedestal:
+    description: Pedestal management (set location, activate rituals)
+    usage: /pedestal <set|activate|deactivate|status>
+    permission: boots.admin
+
+  lives:
+    description: View your remaining lives
+    usage: /lives
+    permission: boots.use
+
+  withdraw:
+    description: Withdraw Boot Shards from your lives
+    usage: /withdraw <amount|all>
+    permission: boots.use
+    aliases: [wd]
+
+  trust:
+    description: Trust another player with your beacon rituals
+    usage: /trust <player>
+    permission: boots.use
+
+  untrust:
+    description: Remove trust from a player
+    usage: /untrust <player>
+    permission: boots.use
+
+  bootset:
+    description: Admin command to set a player's boot type and tier
+    usage: /bootset <player> <type> <tier>
+    permission: boots.admin.set
+
+  reroll:
+    description: Force reroll boots for yourself or another player
+    usage: /reroll [player]
+    permission: boots.admin.reroll
+    aliases: [forcereroll, rr]
+
+  cooldowns:
+    description: Shows cooldowns GUI
+    usage: /cooldowns
+    permission: op
+
+permissions:
+  boots.use:
+    description: Basic boots usage permission
+    default: true
+
+  boots.admin:
+    description: Access to administrative boots commands
+    default: op
+
+  boots.bypass:
+    description: Allows bypassing boots restrictions or cooldowns
+    default: op
+
+  boots.admin.set:
+    description: Allows setting player boot types and tiers
+    default: op
+
+  boots.admin.reroll:
+    description: Allows rerolling boots for any player
+    default: op
